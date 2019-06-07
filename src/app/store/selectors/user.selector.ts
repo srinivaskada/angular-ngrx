@@ -14,3 +14,8 @@ export const selectSelectedUser = createSelector(
   selectUsers,
   (state: IUserState) => state.selectedUser
 );
+
+export const selectLastUserId = createSelector(
+	selectUsers,
+	(state: IUserState) => state.users? state.users[state.users.length-1].id:0
+)

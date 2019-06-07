@@ -10,7 +10,8 @@ import {
   EUserActions,
   GetUserSuccess,
   GetUser,
-  GetUsers
+	GetUsers,
+	AddUser
 } from '../actions/user.actions';
 import { UserService } from '../../services/user.service';
 import { IUserHttp } from '../../models/http-models/user-http.interface';
@@ -34,8 +35,8 @@ export class UserEffects {
     ofType<GetUsers>(EUserActions.GetUsers),
     switchMap(() => this._userService.getUsers()),
     switchMap((userHttp: IUserHttp) => of(new GetUsersSuccess(userHttp.users)))
-  );
-
+	);
+	
   constructor(
     private _userService: UserService,
     private _actions$: Actions,

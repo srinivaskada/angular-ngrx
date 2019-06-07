@@ -1,2 +1,2 @@
 <app-users [users]="users$ | async"
-  (userSelected)="navigateToUser($event)"></app-users>
+  (userSelected)="navigateToUser($event)" (onShowAddUser)="showAddUser()"></app-users>

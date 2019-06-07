@@ -19,7 +19,15 @@ export const userReducers = (
         selectedUser: action.payload
       };
     }
-
+		case EUserActions.AddUser: {
+			return {
+				...state,
+				users: [
+					...state.users,
+					action.payload
+				]
+			}
+		}
     default:
       return state;
   }

@@ -1,0 +1,12 @@
+<form [formGroup]="newUserFormGroup" (submit)="submit()">
+	<mat-form-field>
+		<input matInput placeholder="Name" formControlName="name">
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput placeholder="Card Number" formControlName="cardNumber">
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput placeholder="Card Type" formControlName="cardType">
+	</mat-form-field>
+	<button mat-button type="submit">Add</button>
+</form>
